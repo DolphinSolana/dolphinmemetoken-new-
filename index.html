@@ -6,61 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin Meme Token</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="nav-left">
-            <a href="index.html">Home</a>
-            <a href="presale.html">Presale</a>
-            <a href="nft.html">NFT & Airdrops</a>
-            <a href="tokenomics.html">Tokenomics</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="nav-right">
-            <a href="https://x.com/DolphinSolana24" target="_blank">X</a>
-            <a href="https://t.me/DolphineSolana2" target="_blank">Telegram</a>
-            <a href="https://discord.gg/DUuPTyEDV4" target="_blank">Discord</a>
-            <a href="https://www.tiktok.com/@dolphinsolana" target="_blank">TikTok</a>
-            <a href="https://www.instagram.com/dolphinsolana" target="_blank">Instagram</a>
-            <a href="https://www.reddit.com/user/DolphineSolana" target="_blank">Reddit</a>
-        </div>
-    </nav>
-    <header class="hero-section">
-        <h1 id="hero-title">Welcome to Dolphin Meme Token</h1>
-        <p id="hero-subtitle">A Meme Coin with Purpose, Fun & Real Utility 🐬</p>
-        <a href="presale.html" class="cta-button">Join Presale Now</a>
-        <img src="dolphin_animated.png" alt="Dolphin" class="dolphin-img">
-    </header>
-    <section class="content-section">
-        <h2 class="animate">What is Dolphin Meme Token?</h2>
-        <p class="animate">DOL is not just a meme… It's a Web3 revolution with NFTs, DAO Governance, and real community power.</p>
-    </section>
-    <section class="content-section">
-        <h2 class="animate">Why Join Us?</h2>
-        <ul class="animate">
-            <li>Exclusive NFT Perks</li>
-            <li>Community Voting Rights (DAO)</li>
-            <li>Frequent Airdrops & Giveaways</li>
+    <nav class="navbar">
+        <div class="logo">Dolphin Meme Token</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tokenomics.html">Tokenomics</a></li>
+            <li><a href="nft.html">NFT Utility</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="whitepaper.html">Whitepaper</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+    </nav>
+
+    <header class="hero-section">
+        <h1>Welcome to Dolphin Meme Token</h1>
+        <p>A Meme Coin with Purpose, Fun & Real Utility on Solana 🐬</p>
+        <a href="presale.html" class="cta-button">Join Presale</a>
+    </header>
+
+    <section class="intro-section">
+        <h2>What is Dolphin Meme Token?</h2>
+        <p>Dolphin Meme Token (DOL) is not just another meme coin; it's a revolution combining community, utility, and the power of blockchain.</p>
     </section>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from("#hero-title", {duration: 1, y: -50, opacity: 0});
-        gsap.from("#hero-subtitle", {duration: 1.5, y: 50, opacity: 0, delay: 0.5});
-        gsap.from(".dolphin-img", {duration: 2, scale: 0.5, opacity: 0, ease: "elastic", delay: 1});
-        gsap.utils.toArray(".animate").forEach((elem) => {
-            gsap.from(elem, {
-                scrollTrigger: {
-                    trigger: elem,
-                    start: "top 80%",
-                },
-                y: 50,
-                opacity: 0,
-                duration: 1
-            });
-        });
-    </script>
+
+    <footer class="footer">
+        <p>&copy; 2025 Dolphin Meme Token | All Rights Reserved</p>
+    </footer>
 </body>
 </html>

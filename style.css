@@ -1,54 +1,45 @@
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #001f3f;
-    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    background: #001f3f;
+    color: #fff;
 }
-nav {
-    background-color: #003366;
-    padding: 10px 20px;
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 20px;
+    background: #003366;
 }
-nav a {
-    color: #ffffff;
-    margin: 0 10px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: white;
     text-decoration: none;
 }
 .hero-section {
     text-align: center;
-    padding: 100px 20px;
+    padding: 150px 20px;
     background: linear-gradient(to bottom right, #0077b6, #0096c7);
 }
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
+    background: #ff6600;
+    color: white;
     border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+    text-decoration: none;
 }
-.cta-button:hover {
-    background-color: #e65c00;
-}
-.dolphin-img {
-    width: 200px;
-    margin-top: 30px;
-    animation: float 3s ease-in-out infinite;
-}
-@keyframes float {
-    0% { transform: translatey(0px); }
-    50% { transform: translatey(-20px); }
-    100% { transform: translatey(0px); }
-}
-.content-section {
+.intro-section {
     padding: 80px 20px;
     text-align: center;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #003366;
 }
