@@ -1,36 +1,61 @@
 
-.hero-content h1 {
-    animation: fadeInDown 1s ease-in-out forwards;
-    opacity: 0;
-}
-
-.hero-content p {
-    animation: fadeInUp 1s ease-in-out forwards;
-    animation-delay: 0.5s;
-    opacity: 0;
-}
-
-.cta-button {
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.cta-button:hover {
-    transform: scale(1.05);
-    background-color: #e91e63;
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.countdown-container {
-    margin-top: 20px;
-    font-size: 1.5rem;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #001f3f;
     color: #ffffff;
+}
+nav {
+    background-color: #003366;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.page-header {
+    text-align: center;
+    padding: 50px 20px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #e65c00;
+}
+.whitelist-section {
+    text-align: center;
+    margin: 50px 20px;
+}
+.whitelist-section form {
+    display: inline-block;
+}
+.whitelist-section input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.whitelist-section button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+}
+.whitelist-section button:hover {
+    background-color: #218838;
 }
