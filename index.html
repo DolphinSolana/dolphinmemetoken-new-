@@ -6,50 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin Meme Token</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
-        <a href="nft.html">NFT Utility & Airdrops</a>
-        <a href="tokenomics.html">Tokenomics & Roadmap</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="presale.html">Presale</a>
+        <a href="nft.html">NFT & Airdrops</a>
+        <a href="tokenomics.html">Tokenomics</a>
+        <a href="contact.html">Contact</a>
     </nav>
-    <header class="hero">
-        <div class="hero-content">
-            <h1>A Meme Coin With Purpose</h1>
-            <p>Join the Dolphin Revolution!</p>
-            <a href="#" class="cta-button">Buy $DOL Now</a>
-            <div class="countdown-container">
-                <h2>Presale Starts In:</h2>
-                <div id="countdown">Loading...</div>
-            </div>
-        </div>
+    <header class="hero-section">
+        <h1 id="hero-title">Welcome to Dolphin Meme Token</h1>
+        <p id="hero-subtitle">A Meme Coin with Purpose, Fun & Real Utility 🐬</p>
+        <a href="presale.html" class="cta-button">Join Presale Now</a>
+        <img src="dolphin_animated.png" alt="Dolphin" class="dolphin-img">
     </header>
-    <section class="social-links">
-        <a href="https://x.com/DolphinSolana24?s=09" target="_blank">Twitter</a>
-        <a href="https://t.me/DolphineSolana2" target="_blank">Telegram</a>
-        <a href="https://discord.gg/DUuPTyEDV4" target="_blank">Discord</a>
-        <a href="https://www.tiktok.com/@dolphinsolana" target="_blank">TikTok</a>
-        <a href="https://www.instagram.com/dolphinsolana" target="_blank">Instagram</a>
-        <a href="https://www.reddit.com/user/DolphineSolana" target="_blank">Reddit</a>
+    <section class="content-section">
+        <h2 class="animate">What is Dolphin Meme Token?</h2>
+        <p class="animate">DOL is not just a meme… It's a Web3 revolution with NFTs, DAO Governance, and real community power.</p>
     </section>
-    
-<script>
-    const targetDate = new Date("2025-09-01T00:00:00").getTime();
-    const timer = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-        if (distance < 0) {
-            clearInterval(timer);
-            document.getElementById("countdown").innerHTML = "Presale Launched!";
-        }
-    }, 1000);
-</script>
-
+    <section class="content-section">
+        <h2 class="animate">Why Join Us?</h2>
+        <ul class="animate">
+            <li>Exclusive NFT Perks</li>
+            <li>Community Voting Rights (DAO)</li>
+            <li>Frequent Airdrops & Giveaways</li>
+        </ul>
+    </section>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from("#hero-title", {duration: 1, y: -50, opacity: 0});
+        gsap.from("#hero-subtitle", {duration: 1.5, y: 50, opacity: 0, delay: 0.5});
+        gsap.from(".dolphin-img", {duration: 2, scale: 0.5, opacity: 0, ease: "elastic", delay: 1});
+        gsap.utils.toArray(".animate").forEach((elem) => {
+            gsap.from(elem, {
+                scrollTrigger: {
+                    trigger: elem,
+                    start: "top 80%",
+                },
+                y: 50,
+                opacity: 0,
+                duration: 1
+            });
+        });
+    </script>
 </body>
 </html>
