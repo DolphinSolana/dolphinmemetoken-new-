@@ -11,12 +11,18 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="nft.html">NFT Utility & Airdrops</a>
+        <a href="tokenomics.html">Tokenomics & Roadmap</a>
+        <a href="contact.html">Contact Us</a>
     </nav>
     <header class="hero">
         <div class="hero-content">
             <h1>A Meme Coin With Purpose</h1>
             <p>Join the Dolphin Revolution!</p>
             <a href="#" class="cta-button">Buy $DOL Now</a>
+            <div class="countdown-container">
+                <h2>Presale Starts In:</h2>
+                <div id="countdown">Loading...</div>
+            </div>
         </div>
     </header>
     <section class="social-links">
@@ -27,5 +33,23 @@
         <a href="https://www.instagram.com/dolphinsolana" target="_blank">Instagram</a>
         <a href="https://www.reddit.com/user/DolphineSolana" target="_blank">Reddit</a>
     </section>
+    
+<script>
+    const targetDate = new Date("2025-09-01T00:00:00").getTime();
+    const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "Presale Launched!";
+        }
+    }, 1000);
+</script>
+
 </body>
 </html>
